@@ -1,0 +1,15 @@
+.nav{
+    height: 80px;
+    border-bottom: 5px solid rgba(52,57,141,.2);
+}
+
+.inner{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+}
+
+

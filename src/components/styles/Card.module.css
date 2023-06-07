@@ -1,0 +1,130 @@
+  
+  /* Card */
+  .borderContainer {
+    background: linear-gradient(to right , #34398D
+   0%, #BB494A
+   100%);
+    border-radius: 30px;
+    height: 310px;
+    width: calc(33% - 10px);
+    padding: 4px;
+  }
+
+  .innerContainer{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .imageContainer{
+    width: 100%;
+    height: 200px;
+    background-color: #e6e6e6;
+  }
+
+  .infoContainer{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.025);
+  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.025);
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.025);
+  }
+
+  .infoContainer h4{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #34398D;
+    
+  }
+
+  .infoContainer h4:hover{
+    opacity: 1;
+  }
+
+  .infoContainer span{
+    font-size: 0.8rem ;
+    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Container */
+
+  .inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0 110px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .cardContainer{
+    width: 100%;
+    background-color: #f1f1f1;
+    min-height: calc(100vh - 80px);
+  }
+
+  @media screen and (max-width: 1250px) {
+    .inner{
+      .borderContainer{
+        width: calc(50% - 10px);
+      }
+    }
+  }
+    
+.searchBar{
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.025);
+  -moz-box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.025);
+  box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.025);
+}
+
+.searchBar input[type="text"]{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  font-size: 1rem;
+  align-self: center;
+}
+.searchBar input[type="checkbox"]{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.searchBar label{
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+  flex-shrink: 0;
+
+}

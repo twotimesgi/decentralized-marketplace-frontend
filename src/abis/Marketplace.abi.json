@@ -1,0 +1,177 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "totalListings",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_listingCounter","type":"uint256"}
+			]
+		},
+		{
+			"name": "totalOffers",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"_offersCounter","type":"uint256"}
+			]
+		},
+		{
+			"name": "createListing",
+			"inputs": [
+				{"name":"_title","type":"string"},
+				{"name":"_description","type":"string"},
+				{"name":"_price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getListingIdsBySeller",
+			"inputs": [
+				{"name":"_seller","type":"address"}
+			],
+			"outputs": [
+				{"name":"_listingIds","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "makeOffer",
+			"inputs": [
+				{"name":"_amount","type":"uint256"},
+				{"name":"_listingId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptOffer",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"},
+				{"name":"_offerId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "declineOffer",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"},
+				{"name":"_offerId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getListing",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"title","type":"string"},
+				{"name":"description","type":"string"},
+				{"name":"price","type":"uint256"},
+				{"name":"seller","type":"address"},
+				{"name":"sold","type":"bool"},
+				{"name":"offersCounter","type":"uint256"}
+			]
+		},
+		{
+			"name": "getListingOffer",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"},
+				{"name":"_offerId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"amount","type":"uint256"},
+				{"name":"buyer","type":"address"},
+				{"name":"status","type":"uint8"}
+			]
+		},
+		{
+			"name": "getListingOffers",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"}
+			],
+			"outputs": [
+				{"components":[{"name":"amount","type":"uint256"},{"name":"buyer","type":"address"},{"name":"status","type":"uint8"},{"name":"timestamp","type":"uint256"}],"name":"offers","type":"map(uint256,tuple)"}
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "listings",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"title","type":"string"},{"name":"description","type":"string"},{"name":"price","type":"uint256"},{"name":"seller","type":"address"},{"name":"sold","type":"bool"},{"name":"offersCounter","type":"uint256"},{"name":"timestamp","type":"uint256"},{"components":[{"name":"amount","type":"uint256"},{"name":"buyer","type":"address"},{"name":"status","type":"uint8"},{"name":"timestamp","type":"uint256"}],"name":"offers","type":"map(uint256,tuple)"}],"name":"listings","type":"map(uint256,tuple)"}
+			]
+		},
+		{
+			"name": "listingsIdsBySeller",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"listingsIdsBySeller","type":"map(address,uint256[])"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_nonce","type":"uint256"}
+	],
+	"events": [
+		{
+			"name": "listingCreated",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "offerAccepted",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"},
+				{"name":"_offerId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "offerDeclined",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"},
+				{"name":"_offerId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "offerReceived",
+			"inputs": [
+				{"name":"_listingId","type":"uint256"},
+				{"name":"_offerId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_nonce","type":"uint256"},
+		{"components":[{"name":"title","type":"string"},{"name":"description","type":"string"},{"name":"price","type":"uint256"},{"name":"seller","type":"address"},{"name":"sold","type":"bool"},{"name":"offersCounter","type":"uint256"},{"name":"timestamp","type":"uint256"},{"components":[{"name":"amount","type":"uint256"},{"name":"buyer","type":"address"},{"name":"status","type":"uint8"},{"name":"timestamp","type":"uint256"}],"name":"offers","type":"map(uint256,tuple)"}],"name":"listings","type":"map(uint256,tuple)"},
+		{"name":"listingsIdsBySeller","type":"map(address,uint256[])"},
+		{"name":"listingsCounter","type":"uint256"}
+	]
+}

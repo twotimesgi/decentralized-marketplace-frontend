@@ -1,0 +1,119 @@
+.left{
+    width: 60%;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+}
+
+.right{
+    width: 40%;
+    background-color: white;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+}
+
+.left{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listingContainer{
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+
+}
+
+.imgBox{
+    width: 300px;
+    height: 300px;    
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infoBox{
+    width: calc(100% - 300px);
+    padding: 10px 20px;
+}
+
+.descBox{
+    width: 100%;
+    margin: 60px 0px 20px 0px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1250px) {
+    .left, .right{
+     width: 100%;
+     height: auto;
+    }
+    .listingContainer{
+        flex-direction: column;
+    }
+    .infoBox{
+        width: 100%;
+        padding: 20px 0px;
+    }
+  }
+    
+.card input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-size: 1rem;
+    align-self: center;
+}
+
+.noWrap{
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+
+.btn {
+    flex-shrink: 0;
+    background: #34398d;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: #fff;
+    cursor: pointer;
+    align-self: center;
+}
+
+.btnOutlined{
+    background: transparent;
+    border: 1px solid #34398d;
+    color: #34398d;
+    opacity: 0.7;
+}
+
+.btn:not(.btn.btnOutlined):hover {
+    background: #34398d;
+    opacity: 1;
+}
+
+.btnOutlined:hover{
+    opacity: 1;
+
+}

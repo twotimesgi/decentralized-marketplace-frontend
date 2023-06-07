@@ -1,0 +1,29 @@
+.btn {
+    background: #34398d;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #34398d;
+    opacity: 1;
+}
+
+.address{
+    font-size: 0.8rem ;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.balance{
+    font-size: 0.8rem ;
+}
+
+.walletContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
