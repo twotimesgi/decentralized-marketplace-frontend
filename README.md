@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Decentralized Marketplace on Venom Blockchain
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This decentralized marketplace was developed as part of a hackathon, where it was presented on behalf of **Logyq Protocol**, with contributions from **Luigi Bardella Gerbi (Me)**, acting as a software engineer. **Luca Pedranzini** (CTO) also made smaller contributions to the project.
 
-## Available Scripts
+The marketplace allows users to buy and sell items or services through secure, transparent smart contracts on the Venom blockchain. It empowers both buyers and sellers with full control over transactions, ensuring that all listings and offers are immutably stored and validated on-chain.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### 1. Creating a Listing
+Sellers can create listings by providing details such as:
+- **Title**: A name for the item or service.
+- **Description**: A detailed explanation of what’s being offered.
+- **Price**: The cost of the item or service.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once submitted, the listing is stored on the Venom blockchain, and an event is emitted to notify potential buyers of its availability. Listings are visible to all users in real-time.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 2. Making Offers
+Buyers can make offers on any available listing by:
+- Specifying the **amount** they’re willing to pay.
+- Submitting the offer through the smart contract.
 
-### `npm test`
+The smart contract validates that:
+- The offer amount is greater than zero.
+- The listing exists and is available for purchase.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If the offer matches the seller's price, the smart contract automatically accepts the offer.
 
-### `npm run build`
+### 3. Accepting and Declining Offers
+Sellers have the flexibility to:
+- **Accept** an offer, marking the listing as sold and triggering a confirmation event.
+- **Decline** an offer if it doesn’t meet their requirements, notifying the buyer and freeing the item for other offers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Both actions emit events that keep the participants and other interested parties updated.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Next.js**: Framework for the frontend and server-side rendering.
+- **TypeScript**: Used throughout the project for type safety.
+- **Venom Connect**: Integrates with Venom wallet for blockchain interactions.
+- **Google Cloud Platform**: Platform used for deployment and hosting.
+- **Chai**: Tests on the smart contracts are performed using **Chai** for assertion.
 
-### `npm run eject`
+## Smart Contracts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Smart contracts are written in **T-Sol** (TypeScript Solidity), which manage:
+- Listing creation and storage.
+- Offer validation and acceptance.
+- Transaction finalization between buyer and seller.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Smart Contract Repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The smart contracts for this decentralized marketplace can be found in the following repository:
+[Contracts](https://github.com/twotimesgi/decentralized-marketplace-contracts).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
