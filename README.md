@@ -1,8 +1,10 @@
 # Decentralized Marketplace on Venom Blockchain
 
-This decentralized marketplace was developed as part of a hackathon, where it was presented on behalf of **Logyq Protocol**, with contributions from **Luigi Bardella Gerbi (Me)**, acting as a software engineer. **Luca Pedranzini** (CTO) also made smaller contributions to the project.
+This decentralized marketplace was developed in just **10 days** as part of a hackathon, where it was presented on behalf of **Logyq Protocol**, with contributions from **Luigi Bardella Gerbi (Me)**, acting as a software engineer. **Luca Pedranzini** (CTO) also made smaller contributions to the project.
 
 The marketplace allows users to buy and sell items or services through secure, transparent smart contracts on the Venom blockchain. It empowers both buyers and sellers with full control over transactions, ensuring that all listings and offers are immutably stored and validated on-chain.
+
+Demo: [vimeo.com/834801257](https://vimeo.com/834801257)
 
 ## Key Features
 
